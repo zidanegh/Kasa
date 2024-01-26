@@ -1,0 +1,41 @@
+#body {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 0 100px;
+}
+#card-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 40px 30px 10px 30px;
+  margin-bottom: 45px;
+  border-radius: 10px;
+  background-color: #f6f6f6;
+  width: inherit;
+  height: fit-content;
+}
+.card {
+  border-radius: 12px;
+  margin-bottom: 30px;
+  width: 30%;
+  height: 35vh;
+  position: relative;
+  background-color: black;
+  &__img {
+    mask-image: linear-gradient(
+      to bottom,
+      rgb(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
+    border-radius: 10px;
+    width: 100%;
+    height: inherit;
+  }
+  &__caption {
+    width: 60%;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+  }
+}
