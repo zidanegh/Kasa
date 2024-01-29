@@ -147,15 +147,93 @@ table {
   color: white;
 }
 
-#footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  padding: 60px 0px 30px 0px;
-}
 #footer p {
   color: white;
+}
+
+#appartement__information h1 {
+  font-size: 2em;
+  color: #ff6060;
+}
+#appartement__information h2 {
+  font-size: smaller;
+}
+#appartement__information__loueur p {
+  font-size: large;
+  color: #ff6060;
+}
+#appartement__information__referencement li {
+  font-size: 14px;
+  color: white;
+}
+
+.collapsed__btn {
+  font-size: 18px;
+  color: white;
+  font-weight: 700;
+}
+
+.bigArrowRigth {
+  position: absolute;
+  bottom: 170px;
+  right: 10px;
+}
+
+.bigArrowLeft {
+  bottom: 170px;
+  left: 10px;
+  position: absolute;
+}
+
+#errorId h1 {
+  font-weight: 700;
+  color: #ff6060;
+  font-size: 280px;
+}
+#errorId h2 {
+  font-size: 36px;
+  color: #ff6060;
+}
+#errorId p {
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+.hide {
+  display: none;
+}
+
+#appartement__collapsed {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.collapsed--small {
+  width: 45%;
+}
+
+.collapsed__text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px 15px;
+  max-width: auto;
+  border-radius: 10px;
+  background: rgba(246, 246, 246, 0.4509803922);
+}
+
+.collapsed__btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px 0 10px;
+  width: 100%;
+  height: 52px;
+  text-align: start;
+  background-color: #ff6060;
+  border: none;
+  border-radius: 15px;
 }
 
 #banner {
@@ -172,6 +250,11 @@ table {
 }
 
 #footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 60px 0px 30px 0px;
   background-color: black;
   width: inherit;
 }
@@ -225,6 +308,69 @@ table {
   position: absolute;
   bottom: 10px;
   left: 10px;
+}
+
+#appartement {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+#appartement__wrap {
+  width: 100%;
+  position: relative;
+}
+#appartement__pictures {
+  width: inherit;
+  height: 415px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+#appartement__information {
+  display: flex;
+  justify-content: space-between;
+}
+#appartement__information__logement {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#appartement__information__loueur {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  width: 100px;
+  text-align: end;
+}
+#appartement__information__loueur img {
+  object-fit: contain;
+  width: 60px;
+  border-radius: 50%;
+}
+#appartement__information__referencement {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: inherit;
+}
+#appartement__information__referencement li {
+  display: flex;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff6060;
+  width: 115px;
+  height: 25px;
+}
+
+#errorId {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  margin-bottom: 120px;
 }
 
 /*# sourceMappingURL=index.css.map */

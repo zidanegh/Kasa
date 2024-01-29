@@ -1,0 +1,33 @@
+.hide {
+  display: none;
+}
+
+#appartement__collapsed {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.collapsed--small {
+  width: 45%;
+}
+.collapsed__text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px 15px;
+  max-width: auto;
+  border-radius: 10px;
+  background: #f6f6f673;
+}
+.collapsed__btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px 0 10px;
+  width: 100%;
+  height: 52px;
+  text-align: start;
+  background-color: #ff6060;
+  border: none;
+  border-radius: 15px;
+}

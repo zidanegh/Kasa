@@ -1,6 +1,13 @@
-function NavDesktop (){
-return <>
-<ul><li>accueil</li><li>A-propos</li></ul>
-</>
+function NavDesktop() {
+  return (
+    <>
+      <nav>
+        <ul>
+          <li>accueil</li>
+          <li>A-propos</li>
+        </ul>
+      </nav>
+    </>
+  );
 }
-export default NavDesktop
+export default NavDesktop;

@@ -19,12 +19,62 @@
   }
 }
 #footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  padding: 60px 0px 30px 0px;
   p {
     color: white;
+  }
+}
+#appartement {
+  &__information {
+    h1 {
+      font-size: 2em;
+      color: #ff6060;
+    }
+    h2 {
+      font-size: smaller;
+    }
+    &__loueur {
+      p {
+        font-size: large;
+        color: #ff6060;
+      }
+    }
+    &__referencement {
+      li {
+        font-size: 14px;
+        color: white;
+      }
+    }
+  }
+}
+
+.collapsed__btn {
+  font-size: 18px;
+  color: white;
+  font-weight: 700;
+}
+.bigArrowRigth {
+  position: absolute;
+  bottom: 170px;
+  right: 10px;
+}
+.bigArrowLeft {
+  bottom: 170px;
+  left: 10px;
+  position: absolute;
+}
+
+#errorId {
+  h1 {
+    font-weight: 700;
+    color: #ff6060;
+    font-size: 280px;
+  }
+  h2 {
+    font-size: 36px;
+    color: #ff6060;
+  }
+  p {
+    font-size: 18px;
+    text-decoration: underline;
   }
 }
