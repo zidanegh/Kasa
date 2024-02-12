@@ -1,10 +1,18 @@
+@use "../abstracts" as u;
+
 #header-desktop {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 40px;
+  @include u.for-phone {
+    margin-top: 10px;
+  }
   ul {
     display: flex;
     gap: 40px;
+    @include u.for-phone {
+      gap: 20px;
+    }
   }
 }

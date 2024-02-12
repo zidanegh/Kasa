@@ -1,22 +1,32 @@
-#body {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  margin: 0 100px;
-}
+@use "../abstracts" as u;
+
 #card-wrapper {
-  display: flex;
-  justify-content: start;
-  flex-wrap: wrap;
-  padding: 40px 0px 10px 45px;
+  display: grid;
+  column-gap: 20px;
+  row-gap: 20px;
+  justify-content: center;
+  grid-template-columns: 30% 30% 30%;
+  padding: 40px 0px 30px 0px;
   margin-bottom: 45px;
   border-radius: 10px;
   background-color: #f6f6f6;
   width: inherit;
   height: fit-content;
   a {
-    width: 28%;
-    margin: 2%;
+    width: 100%;
+  }
+  @include u.for-phone {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-bottom: 30px;
+    padding: 0px;
+    align-items: center;
+    background-color: white;
+    a {
+      width: 100%;
+      margin: 0%;
+    }
   }
 }
 .card {

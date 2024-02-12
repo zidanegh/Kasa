@@ -1,7 +1,12 @@
 function Banner({ textBanner }) {
   let text;
   if (textBanner == "accueil") {
-    text = <h1>Chez vous, partout et ailleurs</h1>;
+    text = (
+      <h1>
+        Chez vous,
+        <br /> partout et ailleurs
+      </h1>
+    );
   } else {
     text = null;
   }

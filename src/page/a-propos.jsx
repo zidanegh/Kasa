@@ -1,14 +1,19 @@
-import Banner from "./banner";
-import Collapsed from "./collapsed";
+import Banner from "../component/banner";
+import Collapsed from "../component/collapsed";
 import list from "../assets/ressource/A-propos.json";
 
 function APropos() {
   return (
     <>
-      <div id="body">
-        <Banner textBanner={"a-propos"} />
+      <Banner textBanner={"a-propos"} />
+      <div id="collapsed__apropos">
         {list.map((el) => (
-          <Collapsed object={el} size={"big"} key={el.title} />
+          <Collapsed
+            title={el.title}
+            contentDiv={el.description}
+            size={"big"}
+            key={el.title}
+          />
         ))}
       </div>
     </>

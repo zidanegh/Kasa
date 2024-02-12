@@ -1,21 +1,35 @@
-.hide {
-  display: none;
-}
+@use "../abstracts" as u;
 
 #appartement__collapsed {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  @include u.for-phone {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+#collapsed__apropos {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+
+  @include u.for-phone {
+    gap: 20px;
+    margin-bottom: 20px;
+  }
 }
 .collapsed--small {
   width: 45%;
+  @include u.for-phone {
+    width: 100%;
+  }
 }
 .collapsed__text {
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 18px 15px;
-  max-width: auto;
   border-radius: 10px;
   background: #f6f6f673;
 }
@@ -26,8 +40,12 @@
   padding: 0 20px 0 10px;
   width: 100%;
   height: 52px;
-  text-align: start;
   background-color: #ff6060;
   border: none;
   border-radius: 15px;
+  @include u.for-phone {
+    height: 30px;
+    border-radius: 5px;
+    padding: 0 10px 0 10px;
+  }
 }

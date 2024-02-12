@@ -1,8 +1,13 @@
+@use "../abstracts" as u;
+
 #appartement {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-bottom: 25px;
+  @include u.for-phone {
+    gap: 0px;
+    margin-bottom: 25px;
+  }
   &__wrap {
     width: 100%;
     position: relative;
@@ -12,41 +17,84 @@
     height: 415px;
     object-fit: cover;
     border-radius: 20px;
+    @include u.for-phone {
+      height: 255px;
+      object-fit: fill;
+    }
   }
   &__information {
     display: flex;
     justify-content: space-between;
+    @include u.for-phone {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
     &__logement {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 20px;
+      padding: 10px 0px;
+      @include u.for-phone {
+        width: 100%;
+      }
+      div {
+        h1 {
+          margin-bottom: 10px;
+        }
+      }
+      ul {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        li {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: fit-content;
+          padding: 3px 5px;
+          height: 25px;
+          border-radius: 10px;
+          background-color: #ff6060;
+        }
+      }
     }
     &__loueur {
       display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      gap: 10px;
-      width: 100px;
-      text-align: end;
-      img {
-        object-fit: contain;
-        width: 60px;
-        border-radius: 50%;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 20%;
+      @include u.for-phone {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 15px;
+        gap: 0%;
       }
-    }
-    &__referencement {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      width: inherit;
-      li {
+      div {
         display: flex;
-        border-radius: 20px;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
-        background-color: #ff6060;
-        width: 115px;
-        height: 25px;
+        gap: 10px;
+        @include u.for-phone {
+          gap: 6px;
+        }
+        p {
+          text-align: end;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          width: 50px;
+        }
+        img {
+          object-fit: contain;
+          width: 60px;
+          border-radius: 50%;
+          @include u.for-phone {
+            width: 32px;
+          }
+        }
       }
     }
   }

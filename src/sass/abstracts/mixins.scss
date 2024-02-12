@@ -1,0 +1,40 @@
+@mixin for-phone {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin banner($backgroundimg) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 220px;
+  border-radius: 30px;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    $backgroundimg;
+  background-position: center;
+  background-size: cover;
+  @include for-phone {
+    height: 111px;
+  }
+}
+
+@mixin fontsize-color($fontsize, $color) {
+  color: $color;
+  font-size: $fontsize;
+}
+@mixin fontsize-color-fontweigth700($fontsize, $color) {
+  @include fontsize-color($fontsize, $color);
+  font-weight: 700;
+}
+
+@mixin arrow-position {
+  user-select: none;
+  position: absolute;
+  bottom: 170px;
+  @include for-phone {
+    width: 11px;
+    bottom: 90px;
+  }
+}

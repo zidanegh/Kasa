@@ -1,0 +1,17 @@
+@use "../abstracts" as u;
+
+#root {
+  display: grid;
+  grid-template-rows: auto;
+  align-content: space-between;
+}
+#body {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 0 100px 40px 100px;
+  @include u.for-phone {
+    margin: 0px 20px;
+    gap: 15px;
+  }
+}

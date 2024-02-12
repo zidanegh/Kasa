@@ -1,7 +1,8 @@
-function BigRigthArrow() {
+function BigRigthArrow({ clickEvent }) {
   return (
     <svg
       className="bigArrowRigth"
+      onClick={clickEvent}
       width="48"
       height="80"
       viewBox="0 0 48 80"

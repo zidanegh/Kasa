@@ -1,7 +1,8 @@
-function BigLeftArrow() {
+function BigLeftArrow({ clickEvent }) {
   return (
     <svg
       className="bigArrowLeft"
+      onClick={clickEvent}
       width="48"
       height="80"
       viewBox="0 0 48 80"

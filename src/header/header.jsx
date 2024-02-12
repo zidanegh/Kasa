@@ -1,4 +1,4 @@
-import House from "../assets/svg/house";
+import House from "../component/house";
 import { NavLink } from "react-router-dom";
 
 function Header() {
@@ -10,10 +10,10 @@ function Header() {
           <nav>
             <ul>
               <li>
-                <NavLink to="/">accueil</NavLink>
+                <NavLink to="/">ACCUEIL</NavLink>
               </li>
               <li>
-                <NavLink to="/A-propos">A-propos</NavLink>
+                <NavLink to="/A-propos">A PROPOS</NavLink>
               </li>
             </ul>
           </nav>

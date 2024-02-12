@@ -1,80 +1,128 @@
+@use "../abstracts" as u;
+
 #root {
   font-family: "montserrat", sans-serif;
   font-weight: 500;
 }
 #banner__accueil {
   h1 {
-    font-size: 3em;
-    color: white;
+    br {
+      display: none;
+    }
+    @include u.fontsize-color(3em, u.$color-white);
+    @include u.for-phone {
+      font-size: 24px;
+      br {
+        display: block;
+      }
+    }
   }
 }
 #header-desktop {
-  li {
-    color: #ff6060;
+  svg {
+    @include u.for-phone {
+      width: 145px;
+    }
+  }
+  li a {
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+    @include u.for-phone {
+      font-size: 12px;
+    }
   }
 }
 .card {
   &__caption {
-    color: white;
+    color: u.$color-white;
   }
 }
 #footer {
   p {
-    color: white;
+    color: u.$color-white;
   }
 }
 #appartement {
   &__information {
     h1 {
-      font-size: 2em;
-      color: #ff6060;
+      @include u.fontsize-color(36px, u.$red-font);
+      @include u.for-phone {
+        font-size: 18px;
+      }
     }
     h2 {
       font-size: smaller;
+      @include u.for-phone {
+        font-size: 14px;
+      }
     }
     &__loueur {
       p {
-        font-size: large;
-        color: #ff6060;
+        @include u.fontsize-color(large, u.$red-font);
+        @include u.for-phone {
+          font-size: 12px;
+        }
       }
     }
-    &__referencement {
+    &__logement {
       li {
-        font-size: 14px;
-        color: white;
+        @include u.fontsize-color-fontweigth700(14px, u.$color-white);
+        @include u.for-phone {
+          font-size: 10px;
+        }
       }
     }
   }
 }
 
 .collapsed__btn {
-  font-size: 18px;
-  color: white;
-  font-weight: 700;
+  @include u.fontsize-color-fontweigth700(18pxu, u.$color-white);
+  @include u.for-phone {
+    font-size: 13px;
+    svg {
+      width: 16px;
+    }
+  }
+}
+.collapsed__text {
+  @include u.for-phone {
+    font-size: 12px;
+  }
+  list-style: none;
 }
 .bigArrowRigth {
-  position: absolute;
-  bottom: 170px;
+  @include u.arrow-position;
   right: 10px;
 }
 .bigArrowLeft {
-  bottom: 170px;
+  @include u.arrow-position;
   left: 10px;
-  position: absolute;
 }
 
 #errorId {
   h1 {
     font-weight: 700;
-    color: #ff6060;
-    font-size: 280px;
+    @include u.fontsize-color(280px, u.$red-font);
   }
   h2 {
-    font-size: 36px;
-    color: #ff6060;
+    @include u.fontsize-color(36px, u.$red-font);
   }
   p {
     font-size: 18px;
     text-decoration: underline;
   }
+}
+
+#appartement__information__loueur .etoile {
+  font-size: 24px;
+  @include u.for-phone {
+    font-size: 13px;
+  }
+}
+.red {
+  color: u.$red-font;
+}
+.grey {
+  color: #e3e3e3;
 }
