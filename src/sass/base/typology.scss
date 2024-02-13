@@ -9,7 +9,7 @@
     br {
       display: none;
     }
-    @include u.fontsize-color(3em, u.$color-white);
+    @include u.fontsize-color(3em, u.$white-font);
     @include u.for-phone {
       font-size: 24px;
       br {
@@ -18,6 +18,12 @@
     }
   }
 }
+.active {
+  text-decoration: underline;
+}
+.notActive {
+  text-decoration: none;
+}
 #header-desktop {
   svg {
     @include u.for-phone {
@@ -25,9 +31,8 @@
     }
   }
   li a {
-    color: black;
+    color: initial;
     font-size: 18px;
-    text-decoration: none;
     @include u.for-phone {
       font-size: 12px;
     }
@@ -35,15 +40,18 @@
 }
 .card {
   &__caption {
-    color: u.$color-white;
+    color: u.$white-font;
   }
 }
 #footer {
   p {
-    color: u.$color-white;
+    color: u.$white-font;
   }
 }
 #appartement {
+  &__compteur-image {
+    @include u.fontsize-color(18px, u.$white-font);
+  }
   &__information {
     h1 {
       @include u.fontsize-color(36px, u.$red-font);
@@ -67,7 +75,7 @@
     }
     &__logement {
       li {
-        @include u.fontsize-color-fontweigth700(14px, u.$color-white);
+        @include u.fontsize-color-fontweigth700(14px, u.$white-font);
         @include u.for-phone {
           font-size: 10px;
         }
@@ -77,7 +85,7 @@
 }
 
 .collapsed__btn {
-  @include u.fontsize-color-fontweigth700(18pxu, u.$color-white);
+  @include u.fontsize-color-fontweigth700(18px, u.$white-font);
   @include u.for-phone {
     font-size: 13px;
     svg {

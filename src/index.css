@@ -150,15 +150,22 @@ table {
   }
 }
 
+.active {
+  text-decoration: underline;
+}
+
+.notActive {
+  text-decoration: none;
+}
+
 @media (max-width: 767px) {
   #header-desktop svg {
     width: 145px;
   }
 }
 #header-desktop li a {
-  color: black;
+  color: initial;
   font-size: 18px;
-  text-decoration: none;
 }
 @media (max-width: 767px) {
   #header-desktop li a {
@@ -174,6 +181,10 @@ table {
   color: white;
 }
 
+#appartement__compteur-image {
+  color: white;
+  font-size: 18px;
+}
 #appartement__information h1 {
   color: #ff6060;
   font-size: 36px;
@@ -213,7 +224,7 @@ table {
 
 .collapsed__btn {
   color: white;
-  font-size: 18pxu;
+  font-size: 18px;
   font-weight: 700;
 }
 @media (max-width: 767px) {
@@ -352,6 +363,65 @@ table {
   }
 }
 
+@keyframes negatif {
+  from {
+    transform: rotate(-180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes positif {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes scaleout {
+  from {
+    transform: scaleY(0%);
+    display: none;
+  }
+  1% {
+    display: block;
+  }
+  to {
+    transform: scaleY(100%);
+  }
+}
+@keyframes scalein {
+  from {
+    transform: scaleY(100%);
+  }
+  to {
+    transform: scaleY(0%);
+    display: none;
+  }
+}
+.rotationPositive {
+  animation: negatif 250ms ease-in-out;
+  transform-origin: center;
+}
+
+.rotationNegative {
+  animation: positif 250ms ease-in-out;
+  transform-origin: center;
+}
+
+.scaleIn {
+  animation: scalein 250ms ease-in-out;
+  animation-fill-mode: forwards;
+  transform-origin: top;
+}
+
+.scaleOut {
+  animation: scaleout 250ms ease-in-out;
+  animation-fill-mode: forwards;
+  transform-origin: top;
+}
+
 #banner__accueil {
   display: flex;
   align-items: center;
@@ -438,10 +508,10 @@ table {
 
 #card-wrapper {
   display: grid;
-  column-gap: 20px;
-  row-gap: 20px;
+  column-gap: 3%;
+  row-gap: 2.5%;
   justify-content: center;
-  grid-template-columns: 30% 30% 30%;
+  grid-template-columns: 29% 29% 29%;
   padding: 40px 0px 30px 0px;
   margin-bottom: 45px;
   border-radius: 10px;
@@ -465,6 +535,14 @@ table {
   #card-wrapper a {
     width: 100%;
     margin: 0%;
+  }
+}
+@media (max-width: 960px) {
+  #card-wrapper {
+    column-gap: 4%;
+    row-gap: 1.5%;
+    grid-template-columns: 43% 43%;
+    height: auto;
   }
 }
 
@@ -513,6 +591,17 @@ table {
   #appartement__pictures {
     height: 255px;
     object-fit: fill;
+  }
+}
+#appartement__compteur-image {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  width: fit-content;
+}
+@media (max-width: 767px) {
+  #appartement__compteur-image {
+    display: none;
   }
 }
 #appartement__information {

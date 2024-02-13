@@ -22,6 +22,15 @@
       object-fit: fill;
     }
   }
+  &__compteur-image {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    width: fit-content;
+    @include u.for-phone {
+      display: none;
+    }
+  }
   &__information {
     display: flex;
     justify-content: space-between;

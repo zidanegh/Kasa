@@ -12,11 +12,8 @@ function Appartement() {
   const findObject = list.find((x) => x.id === id);
   const tags = findObject.tags;
   const equipments = findObject.equipments;
-  console.log(findObject.rating);
   const nbrStar = findObject.rating;
   const pictures = findObject.pictures;
-  const star = [];
-
   const [changePicture, setChangePicture] = useState(0);
   function clickDroit() {
     setChangePicture((changePicture) => changePicture + 1);
@@ -35,14 +32,19 @@ function Appartement() {
       <div id="appartement">
         {
           <div id="appartement__wrap">
-            <BigLeftArrow clickEvent={clickGauche} />
+            {pictures.length > 1 && <BigLeftArrow clickEvent={clickGauche} />}
             <img
               id="appartement__pictures"
               src={findObject.pictures[changePicture]}
               alt={findObject.title}
               key={changePicture + 1}
             />
-            <BigrightArrow clickEvent={clickDroit} />
+            {pictures.length > 1 && (
+              <p id="appartement__compteur-image">
+                {changePicture + 1}/{pictures.length}
+              </p>
+            )}
+            {pictures.length > 1 && <BigrightArrow clickEvent={clickDroit} />}
           </div>
         }
         <div id="appartement__information">

@@ -1,14 +1,23 @@
+import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
-import SmallTopArrow from "./small-top-arrow";
 function Collapsed({ title, contentDiv, size }) {
   const [open, setOpen] = useState(false);
   return (
     <div className={"collapsed--" + size}>
       <button className="collapsed__btn" onClick={() => setOpen(!open)}>
         {title}
-        <SmallTopArrow />
+        <FontAwesomeIcon
+          icon={open ? faChevronDown : faChevronUp}
+          className={open === true ? "rotationNegative" : "rotationPositive"}
+        />
+        {console.log(open)}
       </button>
-      {open && <ul className="collapsed__text">{contentDiv}</ul>}
+      <ul
+        className={`collapsed__text ${open === true ? "scaleOut" : "scaleIn"}`}
+      >
+        {contentDiv}
+      </ul>
     </div>
   );
 }

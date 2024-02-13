@@ -3,6 +3,11 @@
     @content;
   }
 }
+@mixin in-between-screen-size {
+  @media (max-width: 960px) {
+    @content;
+  }
+}
 
 @mixin banner($backgroundimg) {
   display: flex;

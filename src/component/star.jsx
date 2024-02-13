@@ -3,7 +3,6 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 const StarIcone = ({ note }) => {
   const noteArray = Array.from({ length: 5 }, (v, i) => i);
-  console.log(note);
   return (
     <>
       {noteArray.map((i) =>
