@@ -2,10 +2,10 @@
 
 #card-wrapper {
   display: grid;
-  column-gap: 3%;
-  row-gap: 2.5%;
+  gap: 40px;
   justify-content: center;
   grid-template-columns: 29% 29% 29%;
+  grid-template-rows: auto;
   padding: 40px 0px 30px 0px;
   margin-bottom: 45px;
   border-radius: 10px;
@@ -29,12 +29,10 @@
     }
   }
   @include u.in-between-screen-size {
-    column-gap: 4%;
-    row-gap: 1.5%;
     grid-template-columns: 43% 43%;
-    height: auto;
   }
 }
+
 .card {
   border-radius: 12px;
   width: 100%;
