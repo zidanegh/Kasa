@@ -1,4 +1,4 @@
-import House from "../House";
+import House from "./House";
 import { NavLink } from "react-router-dom";
 
 function Header() {
