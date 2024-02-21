@@ -1,5 +1,4 @@
 import list from "../assets/ressource/resource.json";
-import SmallTopArrow from "../component/small-top-arrow";
 import BigrightArrow from "../component/big-rigth-arrow";
 import BigLeftArrow from "../component/big-left-arrow";
 import { useParams } from "react-router-dom";

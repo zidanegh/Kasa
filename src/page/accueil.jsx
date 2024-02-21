@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import list from "../assets/ressource/resource.json";
-import Banner from "../component/banner";
+import Banner from "../component/Banner";
 
 function Accueil() {
   return (

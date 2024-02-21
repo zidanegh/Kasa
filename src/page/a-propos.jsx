@@ -1,4 +1,4 @@
-import Banner from "../component/banner";
+import Banner from "../component/Banner";
 import Collapsed from "../component/collapsed";
 import list from "../assets/ressource/A-propos.json";
 
