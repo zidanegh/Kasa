@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { useState } from "react";
 import StarIcone from "../component/star";
 import Collapsed from "../component/collapsed";
+import Carousel from "../component/Carousel";
 
 function Appartement() {
   const { id } = useParams();
@@ -14,6 +15,7 @@ function Appartement() {
   const nbrStar = findObject.rating;
   const pictures = findObject.pictures;
   const [changePicture, setChangePicture] = useState(0);
+  const lengthOfPictures = pictures.length;
   function clickDroit() {
     setChangePicture((changePicture) => changePicture + 1);
     if (changePicture >= pictures.length - 1) {
@@ -29,23 +31,13 @@ function Appartement() {
   return (
     <>
       <div id="appartement">
-        {
-          <div id="appartement__wrap">
-            {pictures.length > 1 && <BigLeftArrow clickEvent={clickGauche} />}
-            <img
-              id="appartement__pictures"
-              src={findObject.pictures[changePicture]}
-              alt={findObject.title}
-              key={changePicture + 1}
-            />
-            {pictures.length > 1 && (
-              <p id="appartement__compteur-image">
-                {changePicture + 1}/{pictures.length}
-              </p>
-            )}
-            {pictures.length > 1 && <BigrightArrow clickEvent={clickDroit} />}
-          </div>
-        }
+        <Carousel
+          lengthPictures={lengthOfPictures}
+          Object={findObject}
+          state={changePicture}
+          clickEventLeftArrow={clickGauche}
+          clickEventRightArrow={clickDroit}
+        />
         <div id="appartement__information">
           <div id="appartement__information__logement">
             <div>
