@@ -141,6 +141,14 @@ table {
 #banner__accueil h1 br {
   display: none;
 }
+@media (max-width: 1024px) {
+  #banner__accueil h1 {
+    text-align: center;
+  }
+  #banner__accueil h1 br {
+    display: block;
+  }
+}
 @media (max-width: 767px) {
   #banner__accueil h1 {
     font-size: 24px;
@@ -276,13 +284,25 @@ table {
   color: #ff6060;
   font-size: 280px;
 }
+@media (max-width: 767px) {
+  #errorId h1 {
+    font-size: 96px;
+  }
+}
 #errorId h2 {
   color: #ff6060;
   font-size: 36px;
 }
+@media (max-width: 767px) {
+  #errorId h2 {
+    text-align: center;
+    font-size: 18px;
+  }
+}
 #errorId p {
   font-size: 18px;
   text-decoration: underline;
+  color: initial;
 }
 
 #appartement__information__loueur .etoile {
@@ -693,6 +713,22 @@ table {
   justify-content: center;
   gap: 100px;
   margin-bottom: 120px;
+}
+#errorId br {
+  display: none;
+}
+@media (max-width: 767px) {
+  #errorId br {
+    display: block;
+  }
+}
+#errorId h2 {
+  text-align: center;
+}
+@media (max-width: 767px) {
+  #errorId {
+    margin-top: 100px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

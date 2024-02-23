@@ -10,6 +10,12 @@
       display: none;
     }
     @include u.fontsize-color(3em, u.$white-font);
+    @include u.in-between-screen-size {
+      br {
+        display: block;
+      }
+      text-align: center;
+    }
     @include u.for-phone {
       font-size: 24px;
       br {
@@ -112,13 +118,21 @@
   h1 {
     font-weight: 700;
     @include u.fontsize-color(280px, u.$red-font);
+    @include u.for-phone {
+      font-size: 96px;
+    }
   }
   h2 {
     @include u.fontsize-color(36px, u.$red-font);
+    @include u.for-phone {
+      text-align: center;
+      font-size: 18px;
+    }
   }
   p {
     font-size: 18px;
     text-decoration: underline;
+    color: initial;
   }
 }
 

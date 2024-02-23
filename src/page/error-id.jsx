@@ -4,13 +4,18 @@ import { NavLink } from "react-router-dom";
 function ErrorId() {
   return (
     <>
-      <Header />
-      <div id="errorId">
-        <h1>404</h1>
-        <h2>Oups! La page que vous demandez n'existe pas.</h2>
-        <NavLink to={"/"}>
-          <p>Retourner sur la page d’accueil</p>
-        </NavLink>
+      <div id="body">
+        <Header />
+        <div id="errorId">
+          <h1>404</h1>
+          <h2>
+            Oups! La page que <br />
+            vous demandez n'existe pas.
+          </h2>
+          <NavLink to={"/"}>
+            <p>Retourner sur la page d’accueil</p>
+          </NavLink>
+        </div>
       </div>
       <Footer />
     </>
