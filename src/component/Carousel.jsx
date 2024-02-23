@@ -1,5 +1,5 @@
-import BigLeftArrow from "./big-left-arrow";
-import BigRigthArrow from "./big-rigth-arrow";
+import BigLeftArrow from "./BigLeftArrow";
+import BigRigthArrow from "./BigRigthArrow";
 
 function Carousel({
   lengthPictures,

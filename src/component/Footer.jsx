@@ -1,4 +1,4 @@
-import LogoFooterDesktop from "./Logo-desktop";
+import LogoFooterDesktop from "./LogoDesktop";
 import CopyRight from "./Copyright";
 function Footer() {
   return (
